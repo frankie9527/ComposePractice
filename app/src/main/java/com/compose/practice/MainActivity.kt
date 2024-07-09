@@ -29,6 +29,7 @@ import com.compose.practice.component.ButtonScreen
 import com.compose.practice.component.CardScreen
 import com.compose.practice.component.DialogScreen
 import com.compose.practice.component.ImageScreen
+import com.compose.practice.component.ProgressScreen
 import com.compose.practice.component.ScaffoldScreen
 import com.compose.practice.component.TextScreen
 import com.compose.practice.ui.theme.ComposePracticeTheme
@@ -57,8 +58,11 @@ fun MainScreen(paddingValues: PaddingValues) {
         composable("card") { CardScreen(paddingValues) }
         composable("dialog") { DialogScreen(paddingValues) }
         composable("image") { ImageScreen(paddingValues) }
+        composable("progress") { ProgressScreen(paddingValues) }
         composable("scaffold") { ScaffoldScreen() }
         composable("text") { TextScreen(paddingValues) }
+
+
     }
 }
 

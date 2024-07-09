@@ -13,6 +13,7 @@ class  UiData{
             Data("card","Use Card"),
             Data("dialog","Use Dialog"),
             Data("image","Use Image"),
+            Data("progress","Progress indicators"),
             Data("scaffold","Use Scaffold"),
             Data("text","Use Text"),)
     }
