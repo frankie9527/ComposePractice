@@ -5,9 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 
 import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,6 +20,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.compose.practice.component.ButtonScreen
+import com.compose.practice.component.ScaffoldScreen
 import com.compose.practice.component.TextScreen
 import com.compose.practice.ui.theme.ComposePracticeTheme
 
@@ -27,32 +30,39 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposePracticeTheme {
-                MainScreen()
+                Scaffold{innerPadding ->
+                    MainScreen(innerPadding)
+                }
+
             }
         }
     }
 }
 
 @Composable
-fun MainScreen() {
+fun MainScreen(paddingValues: PaddingValues) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController) }
+        composable("home") { HomeScreen(navController,paddingValues) }
         composable("text") { TextScreen() }
         composable("button") { ButtonScreen() }
+        composable("scaffold") { ScaffoldScreen() }
     }
 }
 
 @Composable
-fun HomeScreen(navController: NavHostController) {
-    Column {
+fun HomeScreen(navController: NavHostController,paddingValues: PaddingValues) {
+    Column (modifier = Modifier
+        .padding(paddingValues)){
         Button(onClick = { navController.navigate("text") },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Use Text")
         }
         Button(onClick = { navController.navigate("button") },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Use Button")
         }
-
+        Button(onClick = { navController.navigate("scaffold") },Modifier.padding(top =8.dp, start = 8.dp)) {
+            Text("Use Scaffold")
+        }
     }
 }
 
@@ -61,6 +71,6 @@ fun HomeScreen(navController: NavHostController) {
 @Composable
 fun GreetingPreview() {
     ComposePracticeTheme {
-        MainScreen()
+
     }
 }
