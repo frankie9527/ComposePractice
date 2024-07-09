@@ -4,17 +4,25 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
+import androidx.compose.foundation.lazy.grid.items
 
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -32,7 +40,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposePracticeTheme {
-                Scaffold{innerPadding ->
+                Scaffold { innerPadding ->
                     MainScreen(innerPadding)
                 }
 
@@ -45,7 +53,7 @@ class MainActivity : ComponentActivity() {
 fun MainScreen(paddingValues: PaddingValues) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController,paddingValues) }
+        composable("home") { HomeScreen(navController, paddingValues) }
         composable("text") { TextScreen(paddingValues) }
         composable("button") { ButtonScreen(paddingValues) }
         composable("scaffold") { ScaffoldScreen() }
@@ -55,23 +63,25 @@ fun MainScreen(paddingValues: PaddingValues) {
 }
 
 @Composable
-fun HomeScreen(navController: NavHostController,paddingValues: PaddingValues) {
-    Column (modifier = Modifier
-        .padding(paddingValues)){
-        Button(onClick = { navController.navigate("text") },Modifier.padding(top =8.dp, start = 8.dp)) {
-            Text("Use Text")
-        }
-        Button(onClick = { navController.navigate("button") },Modifier.padding(top =8.dp, start = 8.dp)) {
-            Text("Use Button")
-        }
-        Button(onClick = { navController.navigate("scaffold") },Modifier.padding(top =8.dp, start = 8.dp)) {
-            Text("Use Scaffold")
-        }
-        Button(onClick = { navController.navigate("card") },Modifier.padding(top =8.dp, start = 8.dp)) {
-            Text("Use CardScreen")
-        }
-        Button(onClick = { navController.navigate("image") },Modifier.padding(top =8.dp, start = 8.dp)) {
-            Text("Use ImageScreen")
+fun HomeScreen(navController: NavHostController, paddingValues: PaddingValues) {
+    Column(
+        modifier = Modifier
+            .padding(paddingValues)
+    ) {
+        Text(text = "component use", Modifier.padding(16.dp),
+            fontSize = 24.sp,color = MaterialTheme.colorScheme.primary)
+        LazyHorizontalGrid(
+            rows = GridCells.Fixed(2),
+            contentPadding = PaddingValues(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.height(96.dp)
+        ) {
+            items(items = UiData.componentData) { item ->
+                Button(onClick = { navController.navigate(item.route) }) {
+                    Text(item.text)
+                }
+            }
         }
     }
 }
