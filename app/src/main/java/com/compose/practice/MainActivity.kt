@@ -20,6 +20,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.compose.practice.component.ButtonScreen
+import com.compose.practice.component.CardScreen
+import com.compose.practice.component.ImageScreen
 import com.compose.practice.component.ScaffoldScreen
 import com.compose.practice.component.TextScreen
 import com.compose.practice.ui.theme.ComposePracticeTheme
@@ -44,9 +46,11 @@ fun MainScreen(paddingValues: PaddingValues) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
         composable("home") { HomeScreen(navController,paddingValues) }
-        composable("text") { TextScreen() }
-        composable("button") { ButtonScreen() }
+        composable("text") { TextScreen(paddingValues) }
+        composable("button") { ButtonScreen(paddingValues) }
         composable("scaffold") { ScaffoldScreen() }
+        composable("card") { CardScreen(paddingValues) }
+        composable("image") { ImageScreen(paddingValues) }
     }
 }
 
@@ -62,6 +66,12 @@ fun HomeScreen(navController: NavHostController,paddingValues: PaddingValues) {
         }
         Button(onClick = { navController.navigate("scaffold") },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Use Scaffold")
+        }
+        Button(onClick = { navController.navigate("card") },Modifier.padding(top =8.dp, start = 8.dp)) {
+            Text("Use CardScreen")
+        }
+        Button(onClick = { navController.navigate("image") },Modifier.padding(top =8.dp, start = 8.dp)) {
+            Text("Use ImageScreen")
         }
     }
 }

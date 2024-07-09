@@ -2,6 +2,7 @@ package com.compose.practice.component
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
@@ -20,9 +21,10 @@ import androidx.compose.ui.unit.dp
  * @Description:
  */
 @Composable
-fun ButtonScreen() {
+fun ButtonScreen(paddingValues: PaddingValues) {
     val context= LocalContext.current
-    Column {
+    Column(modifier = Modifier
+        .padding(paddingValues)) {
         Button(onClick = { Toast.makeText(context,"Button",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Button")
         }
