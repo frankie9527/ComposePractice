@@ -11,6 +11,7 @@ class  UiData{
         val componentData= listOf(
             Data("button","Use Button"),
             Data("card","Use Card"),
+            Data("dialog","Use Dialog"),
             Data("image","Use Image"),
             Data("scaffold","Use Scaffold"),
             Data("text","Use Text"),)

@@ -19,8 +19,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -29,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.compose.practice.component.ButtonScreen
 import com.compose.practice.component.CardScreen
+import com.compose.practice.component.DialogScreen
 import com.compose.practice.component.ImageScreen
 import com.compose.practice.component.ScaffoldScreen
 import com.compose.practice.component.TextScreen
@@ -54,11 +53,12 @@ fun MainScreen(paddingValues: PaddingValues) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
         composable("home") { HomeScreen(navController, paddingValues) }
-        composable("text") { TextScreen(paddingValues) }
         composable("button") { ButtonScreen(paddingValues) }
-        composable("scaffold") { ScaffoldScreen() }
         composable("card") { CardScreen(paddingValues) }
+        composable("dialog") { DialogScreen(paddingValues) }
         composable("image") { ImageScreen(paddingValues) }
+        composable("scaffold") { ScaffoldScreen() }
+        composable("text") { TextScreen(paddingValues) }
     }
 }
 
@@ -83,14 +83,6 @@ fun HomeScreen(navController: NavHostController, paddingValues: PaddingValues) {
                 }
             }
         }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ComposePracticeTheme {
 
     }
 }
