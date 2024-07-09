@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposePractice</string>
+
+    <string name="text_component">text component</string>
+</resources>
