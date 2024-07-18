@@ -23,9 +23,8 @@ import androidx.compose.ui.unit.dp
  * @Description:
  */
 @Composable
-fun CardScreen(paddingValues: PaddingValues) {
-    Column (modifier = Modifier
-        .padding(paddingValues)){
+fun CardScreen() {
+    Column (modifier = Modifier){
         Card(
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.surfaceVariant,

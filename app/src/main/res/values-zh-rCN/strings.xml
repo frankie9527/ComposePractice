@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ComposePractice</string>
 
+    <string name="describe">Android compose collections for practice，every snippet is basic use.
+        The purpose of this project is to enable beginners to quickly get started</string>
     <string name="text_component">text component</string>
 </resources>

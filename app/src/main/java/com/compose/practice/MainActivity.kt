@@ -58,24 +58,24 @@ class MainActivity : ComponentActivity() {
 fun MainScreen(paddingValues: PaddingValues) {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "home") {
-        composable("home") { HomeScreen(navController, paddingValues) }
+        composable("home") { HomeScreen(navController) }
         HomeDestination.entries.forEach { destination ->
             composable(destination.route) {
                 when (destination) {
-                    HomeDestination.ComponentsUse -> ComponentsScreen(navController,paddingValues)
-                    HomeDestination.AnimationsUse -> AnimationsScreen(paddingValues)
+                    HomeDestination.ComponentsUse -> ComponentsScreen(navController)
+                    HomeDestination.AnimationsUse -> AnimationsScreen()
                 }
             }
             ComponentsDestination.entries.forEach { destination ->
                 composable(destination.route) {
                     when (destination) {
-                        ComponentsDestination.ButtonUse -> ButtonScreen(paddingValues)
-                        ComponentsDestination.CardUse -> CardScreen(paddingValues)
-                        ComponentsDestination.DialogUse -> DialogScreen(paddingValues)
-                        ComponentsDestination.ImageUse -> ImageScreen(paddingValues)
-                        ComponentsDestination.ProgressUse -> ProgressScreen(paddingValues)
+                        ComponentsDestination.ButtonUse -> ButtonScreen()
+                        ComponentsDestination.CardUse -> CardScreen()
+                        ComponentsDestination.DialogUse -> DialogScreen()
+                        ComponentsDestination.ImageUse -> ImageScreen()
+                        ComponentsDestination.ProgressUse -> ProgressScreen()
                         ComponentsDestination.ScaffoldUse -> ScaffoldScreen()
-                        ComponentsDestination.TextUse -> TextScreen(paddingValues)
+                        ComponentsDestination.TextUse -> TextScreen()
                     }
                 }
             }

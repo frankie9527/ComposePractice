@@ -22,9 +22,8 @@ import com.compose.practice.R
  * @Description:
  */
 @Composable
-fun ImageScreen(paddingValues: PaddingValues) {
-    Column(modifier = Modifier
-        .padding(paddingValues)) {
+fun ImageScreen() {
+    Column(modifier = Modifier) {
         Row{
             Image(
                 painter = painterResource(R.drawable.ab1_inversions),

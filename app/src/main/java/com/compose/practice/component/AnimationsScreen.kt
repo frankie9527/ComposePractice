@@ -1,6 +1,6 @@
 package com.compose.practice.component
 
-import androidx.compose.foundation.layout.PaddingValues
+
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.sp
  * @Description:
  */
 @Composable
-fun AnimationsScreen(paddingValues: PaddingValues) {
+fun AnimationsScreen() {
     Text(
         text = "AnimationsScreen", Modifier.padding(16.dp),
         fontSize = 24.sp, color = MaterialTheme.colorScheme.primary

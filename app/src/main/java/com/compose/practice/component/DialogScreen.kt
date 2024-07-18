@@ -22,7 +22,7 @@ import com.compose.practice.component.dialog.AlertDialogExample
  * @Description:
  */
 @Composable
-fun DialogScreen(paddingValues: PaddingValues) {
+fun DialogScreen() {
     val openAlertDialog = remember { mutableStateOf(false) }
     Button(onClick = {openAlertDialog.value=true  },
         Modifier.padding(top =8.dp, start = 8.dp)) {

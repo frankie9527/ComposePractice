@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.compose.practice.UiData
+import com.compose.practice.navigation.ComponentsDestination
 
 /**
  * author: Frankie
@@ -22,10 +22,9 @@ import com.compose.practice.UiData
  * Description:
  */
 @Composable
-fun ComponentsScreen(navController: NavHostController, paddingValues: PaddingValues) {
+fun ComponentsScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
-            .padding(paddingValues)
     ) {
         Text(
             text = "component use", Modifier.padding(16.dp),
@@ -36,9 +35,9 @@ fun ComponentsScreen(navController: NavHostController, paddingValues: PaddingVal
             verticalArrangement = Arrangement.spacedBy(16.dp),
 
         ) {
-            items(items =UiData.componentData) { item ->
+            items(items = ComponentsDestination.entries) { item ->
                 Button(onClick = { navController.navigate(item.route) }) {
-                    Text(item.text)
+                    Text(item.title)
                 }
             }
         }

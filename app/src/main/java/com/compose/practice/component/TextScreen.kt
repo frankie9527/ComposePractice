@@ -18,9 +18,8 @@ import com.compose.practice.R
  * Description:
  */
 @Composable
-fun TextScreen(paddingValues: PaddingValues) {
-    Column (modifier = Modifier
-        .padding(paddingValues)){
+fun TextScreen() {
+    Column (modifier = Modifier){
         Text(text = "this is text", Modifier.padding(top =8.dp, start = 8.dp),
             color = MaterialTheme.colorScheme.primary,
             style = MaterialTheme.typography.headlineMedium

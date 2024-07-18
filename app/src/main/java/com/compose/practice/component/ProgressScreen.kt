@@ -27,10 +27,9 @@ import kotlinx.coroutines.runBlocking
  * @Description:
  */
 @Composable
-fun ProgressScreen(paddingValues: PaddingValues) {
+fun ProgressScreen() {
     Column(
         modifier = Modifier
-            .padding(paddingValues)
     ) {
         var loading by remember { mutableStateOf(false) }
         var currentProgress by remember { mutableStateOf(0f) }

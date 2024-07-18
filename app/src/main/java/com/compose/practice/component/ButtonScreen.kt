@@ -21,10 +21,9 @@ import androidx.compose.ui.unit.dp
  * @Description:
  */
 @Composable
-fun ButtonScreen(paddingValues: PaddingValues) {
+fun ButtonScreen() {
     val context= LocalContext.current
-    Column(modifier = Modifier
-        .padding(paddingValues)) {
+    Column(modifier = Modifier) {
         Button(onClick = { Toast.makeText(context,"Button",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Button")
         }
