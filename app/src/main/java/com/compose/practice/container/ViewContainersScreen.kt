@@ -1,30 +1,36 @@
-package com.compose.practice.component
+package com.compose.practice.container
+
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.compose.practice.navigation.ComponentsDestination
+import com.compose.practice.R
+import com.compose.practice.navigation.HomeDestination
 
 /**
- * author: Frankie
- * Date: 2024/7/18
- * Description:
+ * @author: Frankie
+ * @Date: 2024/7/18
+ * @Description:
  */
+
 @Composable
-fun ComponentsScreen(navController: NavHostController) {
+fun ViewContainersScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
@@ -32,8 +38,16 @@ fun ComponentsScreen(navController: NavHostController) {
         verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
         Text(
-            text = "component use", Modifier.padding(16.dp),
-            fontSize = 24.sp, color = MaterialTheme.colorScheme.primary
+            modifier = Modifier.fillMaxWidth(),
+            style = TextStyle(
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+            ),
+            text = stringResource(id = R.string.app_name),
+        )
+        Text(
+            text = stringResource(id = R.string.describe),
         )
         LazyColumn(
             modifier = Modifier
@@ -42,8 +56,8 @@ fun ComponentsScreen(navController: NavHostController) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
 
-        ) {
-            items(items = ComponentsDestination.entries) { item ->
+            ) {
+            items(items = HomeDestination.entries) { item ->
                 Button(onClick = { navController.navigate(item.route) }) {
                     Text(item.title)
                 }

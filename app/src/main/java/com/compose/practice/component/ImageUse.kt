@@ -2,9 +2,7 @@ package com.compose.practice.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.size
@@ -22,7 +20,7 @@ import com.compose.practice.R
  * @Description:
  */
 @Composable
-fun ImageScreen() {
+fun ImageUse() {
     Column(modifier = Modifier) {
         Row{
             Image(

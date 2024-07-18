@@ -6,8 +6,10 @@ package com.compose.practice.navigation
  * @Description:
  */
 enum class HomeDestination(val route: String, val title: String) {
-    ComponentsUse("Components", "Components Use Examples"),
     AnimationsUse("Animations", "Animations Use Examples"),
+    ComponentsUse("Components", "Components Use Examples"),
+    ViewContainersUse("ViewContainersScreen", "ViewContainers Use Examples"),
+
 }
 
 enum class ComponentsDestination(val route: String, val title: String) {
@@ -18,4 +20,9 @@ enum class ComponentsDestination(val route: String, val title: String) {
     ProgressUse("progress", "progress examples"),
     ScaffoldUse("scaffold", "scaffold examples"),
     TextUse("text", "text examples"),
+}
+enum class ViewContainersDestination(val route: String, val title: String) {
+    BoxUse("box", "box examples"),
+    ColumnUse("column", "column examples"),
+    RowUse("row", "row examples"),
 }

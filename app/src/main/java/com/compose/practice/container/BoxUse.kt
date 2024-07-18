@@ -1,5 +1,4 @@
-package com.compose.practice.component
-
+package com.compose.practice.container
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -15,7 +14,7 @@ import androidx.compose.ui.unit.sp
  * @Description:
  */
 @Composable
-fun AnimationsScreen() {
+fun BoxUse() {
     Text(
         text = "AnimationsScreen", Modifier.padding(16.dp),
         fontSize = 24.sp, color = MaterialTheme.colorScheme.primary

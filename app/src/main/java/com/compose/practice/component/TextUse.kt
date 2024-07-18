@@ -1,7 +1,6 @@
 package com.compose.practice.component
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -18,7 +17,7 @@ import com.compose.practice.R
  * Description:
  */
 @Composable
-fun TextScreen() {
+fun TextUse() {
     Column (modifier = Modifier){
         Text(text = "this is text", Modifier.padding(top =8.dp, start = 8.dp),
             color = MaterialTheme.colorScheme.primary,

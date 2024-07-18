@@ -2,7 +2,6 @@ package com.compose.practice.component
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
@@ -23,7 +22,7 @@ import androidx.compose.ui.unit.dp
  * @Description:
  */
 @Composable
-fun CardScreen() {
+fun CardUse() {
     Column (modifier = Modifier){
         Card(
             colors = CardDefaults.cardColors(

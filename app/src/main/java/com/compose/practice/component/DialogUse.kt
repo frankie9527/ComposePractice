@@ -1,7 +1,5 @@
 package com.compose.practice.component
 
-import android.widget.Toast
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
@@ -22,7 +20,7 @@ import com.compose.practice.component.dialog.AlertDialogExample
  * @Description:
  */
 @Composable
-fun DialogScreen() {
+fun DialogUse() {
     val openAlertDialog = remember { mutableStateOf(false) }
     Button(onClick = {openAlertDialog.value=true  },
         Modifier.padding(top =8.dp, start = 8.dp)) {
