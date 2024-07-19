@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.compose.practice.R
 import com.compose.practice.navigation.HomeDestination
+import com.compose.practice.navigation.ViewContainersDestination
 
 /**
  * @author: Frankie
@@ -37,18 +38,6 @@ fun ViewContainersScreen(navController: NavHostController) {
             .fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
-        Text(
-            modifier = Modifier.fillMaxWidth(),
-            style = TextStyle(
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center,
-            ),
-            text = stringResource(id = R.string.app_name),
-        )
-        Text(
-            text = stringResource(id = R.string.describe),
-        )
         LazyColumn(
             modifier = Modifier
                 .padding(16.dp)
@@ -57,7 +46,7 @@ fun ViewContainersScreen(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally,
 
             ) {
-            items(items = HomeDestination.entries) { item ->
+            items(items = ViewContainersDestination.entries) { item ->
                 Button(onClick = { navController.navigate(item.route) }) {
                     Text(item.title)
                 }
