@@ -11,10 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.compose.practice.animations.AnimationsScreen
+import com.compose.practice.screen.AnimationsScreen
 import com.compose.practice.component.ButtonUse
 import com.compose.practice.component.CardUse
-import com.compose.practice.component.ComponentsScreen
+import com.compose.practice.screen.ComponentsScreen
 import com.compose.practice.component.DialogUse
 import com.compose.practice.component.ImageUse
 import com.compose.practice.component.ProgressUse
@@ -22,13 +22,14 @@ import com.compose.practice.component.ScaffoldUse
 import com.compose.practice.component.TextUse
 import com.compose.practice.container.BoxUse
 import com.compose.practice.container.ColumnUse
+import com.compose.practice.container.PagerUse
 import com.compose.practice.container.RowUse
-import com.compose.practice.container.ViewContainersScreen
+import com.compose.practice.screen.ViewContainersScreen
 import com.compose.practice.navigation.ComponentsDestination
 import com.compose.practice.navigation.HomeDestination
 import com.compose.practice.navigation.ViewContainersDestination
 import com.compose.practice.ui.theme.ComposePracticeTheme
-import com.compose.practice.ui.theme.HomeScreen
+import com.compose.practice.screen.HomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +78,9 @@ fun MainScreen(paddingValues: PaddingValues) {
                     when (destination) {
                         ViewContainersDestination.BoxUse -> BoxUse()
                         ViewContainersDestination.ColumnUse -> ColumnUse()
+                        ViewContainersDestination.PagerUse -> PagerUse()
                         ViewContainersDestination.RowUse -> RowUse()
+
                     }}}
         }
     }

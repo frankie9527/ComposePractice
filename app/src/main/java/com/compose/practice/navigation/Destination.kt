@@ -24,5 +24,6 @@ enum class ComponentsDestination(val route: String, val title: String) {
 enum class ViewContainersDestination(val route: String, val title: String) {
     BoxUse("box", "box examples"),
     ColumnUse("column", "column examples"),
+    PagerUse("pager", "pager examples"),
     RowUse("row", "row examples"),
 }

@@ -1,4 +1,4 @@
-package com.compose.practice.ui.theme
+package com.compose.practice.screen
 
 
 import androidx.compose.foundation.layout.Arrangement

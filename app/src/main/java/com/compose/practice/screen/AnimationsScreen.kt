@@ -1,4 +1,4 @@
-package com.compose.practice.animations
+package com.compose.practice.screen
 
 
 import androidx.compose.foundation.layout.padding
