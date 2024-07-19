@@ -9,7 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.compose.practice.UiData
+import com.compose.practice.uitls.UiData
 
 /**
  * @author: Frankie
@@ -23,7 +23,7 @@ fun RowUse() {
         contentPadding = PaddingValues(horizontal = 16.dp),
         modifier = Modifier.padding(top = 24.dp)
     ) {
-        items(items =UiData.listData){  item ->
+        items(items = UiData.listData){ item ->
             Text(text = "Row this is $item position",Modifier.padding(12.dp))
         }
     }

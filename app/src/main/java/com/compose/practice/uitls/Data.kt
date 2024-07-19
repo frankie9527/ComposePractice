@@ -1,4 +1,4 @@
-package com.compose.practice
+package com.compose.practice.uitls
 
 /**
  * @author: Frankie
@@ -12,3 +12,4 @@ class UiData {
         )
     }
 }
+const val imageUrl="https://img2.baidu.com/it/u=1446158587,2240407672&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=922"
