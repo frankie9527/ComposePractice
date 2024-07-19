@@ -5,16 +5,10 @@ package com.compose.practice
  * @Date: 2024/7/9
  * @Description:
  */
-data class Data(val route: String,val text: String)
-class  UiData{
-    companion object{
-        val componentData= listOf(
-            Data("button","Use Button"),
-            Data("card","Use Card"),
-            Data("dialog","Use Dialog"),
-            Data("image","Use Image"),
-            Data("progress","Progress indicators"),
-            Data("scaffold","Use Scaffold"),
-            Data("text","Use Text"),)
+class UiData {
+    companion object {
+        val listData = listOf(
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+        )
     }
 }
