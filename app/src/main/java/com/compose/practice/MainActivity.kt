@@ -22,6 +22,7 @@ import com.compose.practice.component.ScaffoldUse
 import com.compose.practice.component.TextUse
 import com.compose.practice.container.BoxUse
 import com.compose.practice.container.ColumnUse
+import com.compose.practice.container.FlowUse
 import com.compose.practice.container.PagerUse
 import com.compose.practice.container.RowUse
 import com.compose.practice.screen.ViewContainersScreen
@@ -78,6 +79,7 @@ fun MainScreen(paddingValues: PaddingValues) {
                     when (destination) {
                         ViewContainersDestination.BoxUse -> BoxUse()
                         ViewContainersDestination.ColumnUse -> ColumnUse()
+                        ViewContainersDestination.FlowUse -> FlowUse()
                         ViewContainersDestination.PagerUse -> PagerUse()
                         ViewContainersDestination.RowUse -> RowUse()
 

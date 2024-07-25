@@ -33,7 +33,7 @@ fun ButtonUse() {
             Text("FilledTonalButton")
         }
 
-        OutlinedButton(onClick = { Toast.makeText(context,"FilledTonalButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+        OutlinedButton(onClick = { Toast.makeText(context,"OutlinedButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("OutlinedButton")
         }
         TextButton(onClick = { Toast.makeText(context,"FilledTonalButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
