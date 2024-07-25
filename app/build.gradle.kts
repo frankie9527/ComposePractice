@@ -72,4 +72,7 @@ dependencies {
 
     //glide
     implementation(libs.glide)
+
+    //
+    implementation(libs.androidx.constraintlayout.compose)
 }
