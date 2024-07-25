@@ -13,6 +13,7 @@ enum class HomeDestination(val route: String, val title: String) {
 }
 
 enum class ComponentsDestination(val route: String, val title: String) {
+    BottomSheetUse("bottom sheet", "bottom sheet examples"),
     ButtonUse("button", "button examples"),
     CardUse("card", "card examples"),
     DialogUse("dialog", "dialog examples"),
