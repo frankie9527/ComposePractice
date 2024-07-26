@@ -73,6 +73,9 @@ dependencies {
     //glide
     implementation(libs.glide)
 
-    //
+    //coil
+    implementation(libs.coil.compose)
+
+    //constraintlayout
     implementation(libs.androidx.constraintlayout.compose)
 }

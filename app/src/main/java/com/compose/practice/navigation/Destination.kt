@@ -29,4 +29,5 @@ enum class ViewContainersDestination(val route: String, val title: String) {
     FlowUse("flow", "flow examples"),
     PagerUse("pager", "pager examples"),
     RowUse("row", "row examples"),
+    TabRowUse("tab row", "tab row examples"),
 }

@@ -13,6 +13,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.compose.practice.R
 import com.compose.practice.uitls.imageUrl
 import com.compose.practice.uitls.rememberGlideRequest
@@ -22,6 +23,8 @@ import com.compose.practice.uitls.rememberGlideRequest
  * @author: Frankie
  * @Date: 2024/7/9
  * @Description:
+ * https://developer.android.google.cn/develop/ui/compose/graphics/images/loading
+ * https://coil-kt.github.io/coil/compose/
  */
 @Composable
 fun ImageUse() {
@@ -77,6 +80,17 @@ fun ImageUse() {
             )
         }
 
+        AsyncImage(
+            model = imageUrl,
+            modifier = Modifier
+                .size(128.dp)
+                .padding(top = 24.dp),
+            contentDescription = "Translated description of what the image contains",
+            placeholder = painterResource(R.drawable.ic_launcher_background),
+            error = painterResource(R.drawable.ic_launcher_background),
+        )
     }
 
 }
+
+

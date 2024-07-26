@@ -1,6 +1,5 @@
 package com.compose.practice.component
 
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,6 +8,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -28,6 +28,9 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun BottomSheetUse() {
     var showBottomSheet by remember { mutableStateOf(false) }
+    val sheetState = rememberModalBottomSheetState(
+        skipPartiallyExpanded = false,
+    )
     Box(modifier = Modifier.fillMaxWidth().fillMaxHeight().padding(top = 24.dp)){
         Button(onClick = {  showBottomSheet=!showBottomSheet },Modifier.padding(top =8.dp, start = 8.dp).align(Alignment.TopCenter)) {
             val str=if(showBottomSheet){
@@ -39,9 +42,9 @@ fun BottomSheetUse() {
         }
 
         if (showBottomSheet){
-            Log.e("jyh","wojinlailaé")
             ModalBottomSheet(
                 modifier = Modifier.fillMaxHeight(),
+                sheetState = sheetState,
                 onDismissRequest = { showBottomSheet = false }
             ) {
                 Text(
