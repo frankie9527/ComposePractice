@@ -1,6 +1,10 @@
 package com.compose.practice.component
 
 import android.widget.Toast
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -19,10 +23,11 @@ import androidx.compose.ui.unit.dp
  * @Date: 2024/7/9
  * @Description:
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ButtonUse() {
     val context= LocalContext.current
-    Column(modifier = Modifier) {
+    Column {
         Button(onClick = { Toast.makeText(context,"Button",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("Button")
         }
@@ -38,6 +43,20 @@ fun ButtonUse() {
         }
         TextButton(onClick = { Toast.makeText(context,"FilledTonalButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
             Text("TextButton")
+        }
+        
+        Box(Modifier.padding(24.dp).combinedClickable(
+            onClick = {
+                Toast.makeText(context,"click",Toast.LENGTH_LONG).show()
+            },
+            onLongClick = {
+                Toast.makeText(context,"long click",Toast.LENGTH_LONG).show()
+            },
+            onDoubleClick = {
+                Toast.makeText(context,"double click",Toast.LENGTH_LONG).show()
+            }
+        )){
+            Text(text = "click，double click，long click")
         }
     }
 }
