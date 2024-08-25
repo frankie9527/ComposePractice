@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.compose.practice.component.AndroidViewUse
 import com.compose.practice.component.BottomSheetUse
 import com.compose.practice.screen.AnimationsScreen
 import com.compose.practice.component.ButtonUse
@@ -66,6 +67,7 @@ fun MainScreen(paddingValues: PaddingValues) {
             ComponentsDestination.entries.forEach { destination ->
                 composable(destination.route) {
                     when (destination) {
+                        ComponentsDestination.AndroidViewUse -> AndroidViewUse()
                         ComponentsDestination.BottomSheetUse -> BottomSheetUse()
                         ComponentsDestination.ButtonUse -> ButtonUse()
                         ComponentsDestination.CardUse -> CardUse()

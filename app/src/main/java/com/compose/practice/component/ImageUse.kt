@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.compose.practice.R
@@ -26,6 +27,7 @@ import com.compose.practice.uitls.rememberGlideRequest
  * https://developer.android.google.cn/develop/ui/compose/graphics/images/loading
  * https://coil-kt.github.io/coil/compose/
  */
+@Preview
 @Composable
 fun ImageUse() {
     Column(modifier = Modifier.fillMaxWidth(),horizontalAlignment= Alignment.CenterHorizontally) {

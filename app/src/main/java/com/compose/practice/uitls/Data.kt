@@ -11,6 +11,9 @@ class UiData {
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
         )
         val titleList= listOf("home","news","mine")
+
+        var url = "https://mov.bn.netease.com/open-movie/nos/mp4/2017/05/31/SCKR8V6E9_hd.mp4";
+        val url1="https://www.w3schools.com/html/movie.mp4";
     }
 }
 
