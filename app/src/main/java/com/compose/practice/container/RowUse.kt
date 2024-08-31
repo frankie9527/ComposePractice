@@ -3,6 +3,7 @@ package com.compose.practice.container
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
@@ -21,10 +22,10 @@ fun RowUse() {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         contentPadding = PaddingValues(horizontal = 16.dp),
-        modifier = Modifier.padding(top = 24.dp)
+        modifier = Modifier.statusBarsPadding()
     ) {
-        items(items = UiData.listData){ item ->
-            Text(text = "Row this is $item position",Modifier.padding(12.dp))
+        items(items = UiData.listData) { item ->
+            Text(text = "Row this is $item position", Modifier.padding(12.dp))
         }
     }
 }

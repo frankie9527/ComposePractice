@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,7 +31,7 @@ import com.compose.practice.uitls.rememberGlideRequest
 @Preview
 @Composable
 fun ImageUse() {
-    Column(modifier = Modifier.fillMaxWidth(),horizontalAlignment= Alignment.CenterHorizontally) {
+    Column(modifier = Modifier.fillMaxWidth().statusBarsPadding(),horizontalAlignment= Alignment.CenterHorizontally) {
         Image(
             painter = painterResource(R.drawable.ab1_inversions),
             contentDescription = null,

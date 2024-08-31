@@ -1,6 +1,7 @@
 package com.compose.practice.container
 
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.statusBarsPadding
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -28,7 +29,7 @@ fun ConstraintUse() {
 
 @Composable
 fun Demo1() {
-    ConstraintLayout {
+    ConstraintLayout(modifier = Modifier.statusBarsPadding()) {
         // Create references for the composables to constrain
         val (button, text) = createRefs()
 

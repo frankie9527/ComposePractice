@@ -1,6 +1,7 @@
 package com.compose.practice.component
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.Button
@@ -23,7 +24,7 @@ import com.compose.practice.component.dialog.AlertDialogExample
 fun DialogUse() {
     val openAlertDialog = remember { mutableStateOf(false) }
     Button(onClick = {openAlertDialog.value=true  },
-        Modifier.padding(top =8.dp, start = 8.dp)) {
+        Modifier.statusBarsPadding()) {
         Text("Button")
     }
     if (openAlertDialog.value){

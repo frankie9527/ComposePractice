@@ -3,8 +3,10 @@ package com.compose.practice.container
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -23,7 +25,7 @@ import androidx.compose.ui.unit.sp
 @Preview
 @Composable
 fun BoxUse() {
-    Box(modifier = Modifier.fillMaxWidth().fillMaxHeight().padding(24.dp).background(Color.Cyan)){
+    Box(modifier = Modifier.fillMaxSize().statusBarsPadding().background(Color.Cyan)){
         Text(text = "top left", Modifier.align(Alignment.TopStart))
         Text(text = "top center", Modifier.align(Alignment.TopCenter))
         Text(text = "top right", Modifier.align(Alignment.TopEnd))

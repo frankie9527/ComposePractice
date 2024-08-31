@@ -13,7 +13,7 @@ enum class HomeDestination(val route: String, val title: String) {
 }
 
 enum class ComponentsDestination(val route: String, val title: String) {
-    AndroidViewUse("android view", "use custom view examples"),
+    AndroidViewUse("android view", "android view examples"),
     BottomSheetUse("bottom sheet", "bottom sheet examples"),
     ButtonUse("button", "button examples"),
     CardUse("card", "card examples"),
@@ -31,4 +31,5 @@ enum class ViewContainersDestination(val route: String, val title: String) {
     PagerUse("pager", "pager examples"),
     RowUse("row", "row examples"),
     TabRowUse("tab row", "tab row examples"),
+    TopBarUse("top bar", "top bar examples"),
 }

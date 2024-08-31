@@ -3,6 +3,7 @@ package com.compose.practice.component
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.FilledTonalButton
@@ -21,22 +22,37 @@ import androidx.compose.ui.unit.dp
  */
 @Composable
 fun ButtonUse() {
-    val context= LocalContext.current
-    Column(modifier = Modifier) {
-        Button(onClick = { Toast.makeText(context,"Button",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+    val context = LocalContext.current
+    Column(modifier = Modifier.statusBarsPadding()) {
+        Button(
+            onClick = { Toast.makeText(context, "Button", Toast.LENGTH_LONG).show() },
+            Modifier.padding(top = 8.dp, start = 8.dp)
+        ) {
             Text("Button")
         }
-        ElevatedButton(onClick = { Toast.makeText(context,"ElevatedButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+        ElevatedButton(onClick = {
+            Toast.makeText(context, "ElevatedButton", Toast.LENGTH_LONG).show()
+        }, Modifier.padding(top = 8.dp, start = 8.dp)) {
             Text("ElevatedButton")
         }
-        FilledTonalButton(onClick = { Toast.makeText(context,"FilledTonalButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+        FilledTonalButton(onClick = {
+            Toast.makeText(
+                context,
+                "FilledTonalButton",
+                Toast.LENGTH_LONG
+            ).show()
+        }, Modifier.padding(top = 8.dp, start = 8.dp)) {
             Text("FilledTonalButton")
         }
 
-        OutlinedButton(onClick = { Toast.makeText(context,"OutlinedButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+        OutlinedButton(onClick = {
+            Toast.makeText(context, "OutlinedButton", Toast.LENGTH_LONG).show()
+        }, Modifier.padding(top = 8.dp, start = 8.dp)) {
             Text("OutlinedButton")
         }
-        TextButton(onClick = { Toast.makeText(context,"FilledTonalButton",Toast.LENGTH_LONG).show()  },Modifier.padding(top =8.dp, start = 8.dp)) {
+        TextButton(onClick = {
+            Toast.makeText(context, "FilledTonalButton", Toast.LENGTH_LONG).show()
+        }, Modifier.padding(top = 8.dp, start = 8.dp)) {
             Text("TextButton")
         }
     }

@@ -2,6 +2,7 @@ package com.compose.practice.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -25,7 +26,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ProgressUse() {
     Column(
-        modifier = Modifier
+        modifier = Modifier.statusBarsPadding()
     ) {
         var loading by remember { mutableStateOf(false) }
         var currentProgress by remember { mutableStateOf(0f) }

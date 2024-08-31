@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -31,7 +32,8 @@ fun ComponentsScreen(navController: NavHostController) {
     Column(
         modifier = Modifier
             .padding(16.dp)
-            .fillMaxSize(),
+            .fillMaxSize()
+            .statusBarsPadding(),
         verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
         Text(
@@ -44,7 +46,7 @@ fun ComponentsScreen(navController: NavHostController) {
             text = "Components examples",
         )
         Text(
-            text ="this is collection of Components examples",
+            text = "this is collection of Components examples",
         )
         LazyColumn(
             modifier = Modifier
@@ -53,7 +55,7 @@ fun ComponentsScreen(navController: NavHostController) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
 
-        ) {
+            ) {
             items(items = ComponentsDestination.entries) { item ->
                 Button(onClick = { navController.navigate(item.route) }) {
                     Text(item.title)

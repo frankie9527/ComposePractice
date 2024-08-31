@@ -3,6 +3,7 @@ package com.compose.practice.container
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material3.MaterialTheme
@@ -27,11 +28,13 @@ fun PagerUse() {
     val count = rememberPagerState(pageCount = {
         UiData.listData.size
     })
-    HorizontalPager(state = count) { page ->
+    HorizontalPager(state = count, modifier = Modifier.statusBarsPadding()) { page ->
         // Our page content
         Box(modifier = Modifier.fillMaxSize()) {
-            Text(text = "this is $page", Modifier.align(Alignment.Center),
-                fontSize = 24.sp, color =  MaterialTheme.colorScheme.primary)
+            Text(
+                text = "this is $page", Modifier.align(Alignment.Center),
+                fontSize = 24.sp, color = MaterialTheme.colorScheme.primary
+            )
         }
     }
 }

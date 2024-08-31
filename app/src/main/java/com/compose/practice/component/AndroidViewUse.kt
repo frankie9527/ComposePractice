@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,10 +32,12 @@ fun AndroidViewUse() {
             Modifier
                 .fillMaxWidth()
                 .height(240.dp)
+                .statusBarsPadding()
         } else {
             Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
+                .statusBarsPadding()
         }
         val simpleVideoView = remember {
             SimpleVideoView(context).apply {

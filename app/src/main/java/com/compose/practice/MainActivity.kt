@@ -29,6 +29,7 @@ import com.compose.practice.container.FlowUse
 import com.compose.practice.container.PagerUse
 import com.compose.practice.container.RowUse
 import com.compose.practice.container.TabRowUse
+import com.compose.practice.container.TopBarUse
 import com.compose.practice.screen.ViewContainersScreen
 import com.compose.practice.navigation.ComponentsDestination
 import com.compose.practice.navigation.HomeDestination
@@ -90,6 +91,7 @@ fun MainScreen(paddingValues: PaddingValues) {
                         ViewContainersDestination.PagerUse -> PagerUse()
                         ViewContainersDestination.RowUse -> RowUse()
                         ViewContainersDestination.TabRowUse -> TabRowUse()
+                        ViewContainersDestination.TopBarUse -> TopBarUse()
                     }}}
         }
     }
