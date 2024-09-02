@@ -19,6 +19,7 @@ import com.compose.practice.component.CardUse
 import com.compose.practice.screen.ComponentsScreen
 import com.compose.practice.component.DialogUse
 import com.compose.practice.component.ImageUse
+import com.compose.practice.component.NavigationDrawerUse
 import com.compose.practice.component.ProgressUse
 import com.compose.practice.component.ScaffoldUse
 import com.compose.practice.component.TextUse
@@ -74,6 +75,7 @@ fun MainScreen(paddingValues: PaddingValues) {
                         ComponentsDestination.CardUse -> CardUse()
                         ComponentsDestination.DialogUse -> DialogUse()
                         ComponentsDestination.ImageUse -> ImageUse()
+                        ComponentsDestination.NavigationDrawerUse -> NavigationDrawerUse()
                         ComponentsDestination.ProgressUse -> ProgressUse()
                         ComponentsDestination.ScaffoldUse -> ScaffoldUse()
                         ComponentsDestination.TextUse -> TextUse()

@@ -19,9 +19,10 @@ enum class ComponentsDestination(val route: String, val title: String) {
     CardUse("card", "card examples"),
     DialogUse("dialog", "dialog examples"),
     ImageUse("image", "image examples"),
+    NavigationDrawerUse("navigation drawer", "navigation drawer examples"),
     ProgressUse("progress", "progress examples"),
     ScaffoldUse("scaffold", "scaffold examples"),
-    TextUse("text", "text examples"),
+    TextUse("text", "text examples")
 }
 enum class ViewContainersDestination(val route: String, val title: String) {
     BoxUse("box", "box examples"),
